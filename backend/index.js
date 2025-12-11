@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 const pool = require("./config/connect");
 const express = require("express");
@@ -14,13 +15,16 @@ const paymentRoutes = require("./routes/paymentRoutes");
 
 
 const allowed = ["https://prime-ticket.vercel.app",
-                 "http://localhost:5173"
+                 "http://localhost:5173",
+                 "https://primeticket.onrender.com"
                 ];
 app.use(cors({
   origin: (origin, cb) => cb(null, !origin || allowed.includes(origin))
 }));
 
 app.use(express.json());
+
+
 
 // login routes
 
