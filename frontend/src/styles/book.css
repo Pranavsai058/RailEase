@@ -1,0 +1,247 @@
+/* ---------- Variables ---------- */
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #4CAF50;
+  --muted: #7b7f86;
+  --primaryBlue: #1f2d45;
+  --glass: rgba(255,255,255,0.85);
+}
+
+/* General page */
+.bookaticket {
+  margin: 40px auto 80px;
+  max-width: 1100px;
+  color: var(--primaryBlue);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(18,34,63,0.08);
+  border: 1px solid rgba(34,34,34,0.03);
+}
+
+/* Top selected train card */
+.book-top {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.selected-train-card {
+  flex: 1;
+  background: linear-gradient(90deg, #fff, #fbfbff);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(33,33,33,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(34,34,34,0.04);
+}
+
+.train-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.train-title h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #1b2740;
+}
+
+.train-title .small { font-size: 12px; color: var(--muted); }
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.route .station { font-size: 16px; }
+.route .arrow { font-size: 18px; color: #8a8f98; }
+
+.date-price {
+  text-align: right;
+}
+
+.date { font-size: 13px; color: var(--muted); }
+.price { font-size: 18px; font-weight: 700; color: var(--accent); }
+
+/* meta pill */
+.train-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background: rgba(0,0,0,0.04);
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+/* Headings */
+h2 { margin: 10px 0 18px; color: #1b2740; }
+
+/* Passenger card */
+.passenger-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(0,0,0,0.04);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(19,26,41,0.03);
+}
+
+.passenger-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.passenger-header h5 { margin: 0; font-size: 15px; color: #263045; }
+
+/* passenger inputs layout */
+.repeat-passenger-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Responsive small input behavior */
+.repeat-passenger-flex-child { min-width: 0; }
+
+/* Add row - right aligned summary */
+.add-passenger-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+/* Fare summary box */
+.fare-summary {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-left: auto;
+  background: linear-gradient(180deg, rgba(242,250,240,0.9), rgba(255,255,255,0.85));
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(76,175,80,0.08);
+}
+
+.fare-summary .small { color: var(--muted); font-size: 12px; }
+.fare-summary .big { font-weight: 700; font-size: 18px; color: var(--primaryBlue); }
+.fare-summary .total { color: var(--accent); }
+
+/* Contact */
+.contact-details-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+/* Error */
+.error {
+  color: #d32f2f;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Buttons row */
+.pay-row {
+  display:flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 10, 20, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.overlay-card {
+  background: linear-gradient(180deg, #fff, #fbfbff);
+  padding: 28px 36px;
+  border-radius: 14px;
+  text-align: center;
+  color: var(--primaryBlue);
+  box-shadow: 0 12px 36px rgba(12,22,40,0.22);
+  max-width: 420px;
+  width: 96%;
+  border: 1px solid rgba(30,40,60,0.04);
+}
+
+.overlay-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #1b283b;
+}
+
+.overlay-card p {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 14px;
+}
+
+/* small loader inside overlay */
+.loader {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 4px solid rgba(0,0,0,0.08);
+  border-top-color: var(--accent);
+  animation: spin 1s linear infinite;
+  margin: 8px auto 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* responsive */
+@media (max-width: 920px) {
+  .repeat-passenger-flex {
+    grid-template-columns: 1fr;
+  }
+  .fare-summary {
+    display: none;
+  }
+  .bookaticket {
+    padding: 18px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-details-flex { flex-direction: column; gap: 14px; }
+  .pay-row { flex-direction: column; align-items: stretch; }
+  .pay-row button { width: 100% !important; }
+}

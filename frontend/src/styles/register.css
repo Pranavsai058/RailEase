@@ -1,0 +1,190 @@
+.register {
+  height: 100vh;
+  background-image: url("/images/loginbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 50px;
+        line-height: auto;
+        font-weight: bold;
+        color: rgb(227, 91, 227);
+        font-family: cursive;
+      }
+
+       p {
+        font-size: 20px;
+        font-weight: bold;
+        background: linear-gradient(90deg, #12e319, #0ea4b2, #f44336);
+        -webkit-background-clip: text;   /* For Chrome, Safari */
+        -webkit-text-fill-color: transparent;  /* Makes gradient visible */
+        background-clip: text;           /* For Firefox */
+        color: transparent;
+        }
+
+      span {
+        font-size: 18px;
+        color: rgb(182, 151, 151);
+        text-align: center;
+      }
+      
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: rebeccapurple;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+      color: #555;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 50px;
+      margin-bottom: 30px;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+        input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        padding: 20px 10px;
+        }
+        
+         button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #d64de2;
+          color: white;
+          font-weight: bolder;
+          font-size: 20px;
+          cursor: pointer;
+          border-radius: 10px;
+        }
+
+        button:hover {
+          background-color: #e72344;
+          cursor: pointer;
+          animation: pulse 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+/* Fullscreen overlay */
+.overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.6); /* dark transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* make sure it sits on top of everything */
+}
+
+/* The success card */
+.overlay-card {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+.overlay-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #4caf50; /* success green */
+}
+
+.overlay-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Animation for smooth entry */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.role-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.role-toggle button {
+  background-color: #eee;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.role-toggle button.active {
+  background-color: #d64de2;
+  color: white;
+  transform: scale(1.05);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
